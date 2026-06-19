@@ -32,6 +32,13 @@
 
     <section class="hobby-grid">
         <h1>{{ title }}</h1>
+        <ul>
+        {% for hobby in hobbies %}
+            <img src={{hobby.image}}/>
+            <li>{{hobby.name}}</li>
+            <p>{{hobby.desc}}</p>
+        {% endfor %}
+        </ul>
     </section>
 </body>
 </html>
