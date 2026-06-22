@@ -101,8 +101,23 @@ body {
 }
 
 .btn{
-    margin: 20px; 
+    text-decoration: none;
     display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    color: #007bff;
+    border: solid;
+    border-radius: 25px;
+    border-color: #007bff;
+    transition: color 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.btn:hover, .btn:focus{
+    color: white;
+    background-color: #007bff;
+    transition: color 0.3s ease,
+                background-color 0.3s ease;
 }
 
 .hobby-grid ul{
@@ -110,6 +125,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     list-style: none;
+    margin-bottom: 0;
 }
 
 /* Work Experience Page */
