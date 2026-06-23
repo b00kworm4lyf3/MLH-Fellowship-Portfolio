@@ -2,16 +2,16 @@
 {% block content %}
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/myphoto.jpg">
+            <img src= "{{url_for('static', filename = user.headshot)}}">
         </div>
         
         <h1>{{ title }}</h1>
-        <h2 class="name">[Your Name]</h2>
-        <p class="tagline">Tech enthusiast | Coffee lover | Adventure seeker</p>
+        <h2 class="name">{{user.name}}</h2>
+        <p class="tagline">{{user.tagline}}</p>
         <div class="button-group">
-            <a href="/about" class="btn">Learn More About Me →</a>
-            <a href="/work" class="btn">My Work Experience →</a>
-            <a href="/hobbies" class="btn">My Hobbies →</a>
+            {% for link in links %}
+            <a href = "{{url_for(link.endpoint)}}" class = "btn">{{link.tagline}}</a>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
