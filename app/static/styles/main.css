@@ -144,12 +144,12 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.experience-item h3 {
+.experience-item h4 {
     margin-bottom: 5px;
     color: #333;
 }
 
-.experience-item p {
+.experience-item h5 {
     margin: 8px 0;
     color: #555;
 }

@@ -1,47 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="../static/img/myphoto.jpg">
-        </div>
-        <h1>Work Experience</h1>
-    </div>
-
     <div class="experience-section">
-        <h2>My Experience</h2>
+        <h2>Work Experience</h2>
 
         <h3 class="section-subtitle">Current Experience</h3>
         
+        {% for item in exp.current %}
         <div class="experience-item">
-            <h3>Position Title</h3>
-            <p><strong>Company/Organization</strong> | Year</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="recognition">
-                <span class="badge">🏆 Recognition</span>
-                <a href="#" class="cert-link">📜 View Certification</a>
-            </div>
+            <h4>{{item.title}}</h4>
+            <h5><strong>{{item.company}}</strong> | {{item.year}}</h5>
+            <ul>
+                {% for point in item.about %}
+                <li>{{point}}</li>
+                {% endfor %}
+            </ul>
         </div>
+        {% endfor %}
 
         <h3 class="section-subtitle">Previous Experience</h3>
-        
+        {% for item in exp.past %}
         <div class="experience-item">
-            <h3>Position Title</h3>
-            <p><strong>Company/Organization</strong> | Year</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="recognition">
-                <span class="badge">⭐ Award</span>
-                <a href="#" class="cert-link">📜 View Certification</a>
-            </div>
+            <h4>{{item.title}}</h4>
+            <h5><strong>{{item.company}}</strong> | {{item.year}}</h5>
+            <ul>
+                {% for point in item.about %}
+                <li>{{point}}</li>
+                {% endfor %}
+            </ul>
         </div>
-
-        <div class="experience-item">
-            <h3>Position Title</h3>
-            <p><strong>Company/Organization</strong> | Year</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="recognition">
-                <span class="badge">📜 Certification</span>
-                <a href="#" class="cert-link">🔗 View Credential</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}
