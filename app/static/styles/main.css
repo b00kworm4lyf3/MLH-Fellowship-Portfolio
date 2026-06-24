@@ -198,3 +198,28 @@ body {
     gap: 12px;
     margin-top: 10px;
 }
+
+/* Travel Map - Folium */
+.travel-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.travel-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.map-container .folium-map {
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

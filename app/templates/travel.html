@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="travel-section">
+    <h1>{{ title }}</h1>
+    <div class="map-container">
+        {{ map_html|safe }}
+    </div>
+</section>
+{% endblock %}

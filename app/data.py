@@ -59,3 +59,30 @@ exp = {
                    ]}
     ]
 }
+
+travel = {
+    "visited": [
+        {
+            "name": "Paris",
+            "year": "2023",
+            "top": "32%",
+            "left": "48%",
+            "image": "https://picsum.photos/400/300?random=1"
+        },
+        {
+            "name": "Tokyo",
+            "year": "2024",
+            "top": "30%",
+            "left": "78%",
+            "image": "https://picsum.photos/400/300?random=2"
+        }
+    ],
+    "wishlist": [
+        {
+            "name": "Bhutan",
+            "top": "38%",
+            "left": "72%",
+            "image": "https://picsum.photos/400/300?random=3"
+        }
+    ]
+}
