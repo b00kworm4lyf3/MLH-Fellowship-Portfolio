@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template
 from dotenv import load_dotenv
 
-from .data import user, hobbies, exp
+from .data import user, hobbies, exp, edu
 
 load_dotenv()
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def hobby():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title="About Me", user = user)
+    return render_template('about.html', title="About Me", user = user, edu = edu)
 
 @app.route('/work')
 def work():

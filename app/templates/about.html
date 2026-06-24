@@ -6,5 +6,19 @@
         {% for p in user.about %}
         <p>{{p}}</p>
         {% endfor %}
+
+        <h2>My Education</h2>
+        {% for e in edu %}
+        <article>
+            <h3>{{e.degree}} || {{e.school}}</h3>
+            <p>{{e.period}}</p>
+            <p>{{e.description}}</p>
+            {% if e.links %}
+            {% for l in e.links %}
+            <a href="{{l.link}}">{{l.linkName}}</a>
+            {% endfor %}
+            {% endif %}
+        </article>
+        {% endfor %}
     </section>
 {% endblock %}

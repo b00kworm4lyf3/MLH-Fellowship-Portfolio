@@ -59,3 +59,20 @@ exp = {
                    ]}
     ]
 }
+
+edu = [
+    {"degree": "BS Lorem Ipsum",
+     "school": "Lorem Ipsum University",
+     "period": "2018 - 2022",
+     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+     "links":[
+            {"link": "#",
+            "linkName": "To Nowhere."},
+            {"link": "#",
+            "linkName": "Also To Nowhere."},]},
+    {"degree": "AA Lorem Ipsum",
+     "school": "Lorem Ipsum Community College",
+     "period": "2016 - 2018",
+     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+     "links": None}
+]
