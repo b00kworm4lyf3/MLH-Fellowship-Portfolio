@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
     <header class="hero">
-        <img id="profile-picture" class="profile-picture" src= "{{url_for('static', filename = user.headshot)}}" alt = "{{user.altTxt}}">
-
-        
-        <h1>{{ title }}</h1>
-        <h2 class="name">{{user.name}}</h2>
-        <p class="tagline">{{user.tagline}}</p>
-        <div class="button-group">
-            {% for link in links %}
-            <a href = "{{url_for(link.endpoint)}}" class = "btn">{{link.tagline}}</a>
-            {% endfor %}
+        <div class="hero-text">
+            <h1>{{ user.title }}</h1>
+            <h2 class="name">{{ user.name }}</h2>
+            <p class="tagline">{{ user.tagline }}</p>
+            <div class="button-group">
+                {% for link in links %}
+                <a href="{{ url_for(link.endpoint) }}" class="btn">{{ link.tagline }}</a>
+                {% endfor %}
+            </div>
         </div>
+        <img id="profile-picture" class="profile-picture"
+             src="{{ url_for('static', filename=user.headshot) }}" alt="{{ user.altTxt }}">
     </header>
 {% endblock %}

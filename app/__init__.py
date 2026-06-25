@@ -16,9 +16,15 @@ LINKS = [
     {"name": "Travel", "endpoint": "travel_page", "tagline": "My Travels"}
 ]
 
+CONTACT = [
+    {"label": "Contact Me", "href": "mailto:you@example.com"},
+    {"label": "GitHub", "href": "https://github.com/"},
+    {"label": "LinkedIn", "href": "https://linkedin.com/"},
+]
+
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", user = user)
+    return render_template('index.html', title="Home", user = user)
 
 @app.route('/hobbies')
 def hobby():
@@ -60,4 +66,4 @@ def travel_page():
 
 @app.context_processor
 def nav():
-    return{"links": LINKS, "url": os.getenv("URL")}
+    return{"links": LINKS, "contact": CONTACT, "url": os.getenv("URL")}

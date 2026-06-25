@@ -34,6 +34,11 @@
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer></footer>
+
+    <footer class="site-footer">
+    {% for c in contact %}
+    <a href="{{c.href}}"{% if c.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{{c.label}}</a>
+    {% endfor %}
+    </footer>
 </body>
 </html>

@@ -2,12 +2,16 @@
 {% block content %}
     <section class="about-section">
         <h1>About Me</h1>
-        <img src="{{url_for('static', filename = user.headshot)}}" alt = "{{user.altTxt}}">
-        {% for p in user.about %}
-        <p>{{p}}</p>
-        {% endfor %}
+        <div class = "about-intro">
+            <img src="{{url_for('static', filename = user.headshot)}}" alt = "{{user.altTxt}}">
+            <div class = "about-text">
+                {% for p in user.about %}
+                <p>{{p}}</p>
+                {% endfor %}
+            </div>
+        </div>
 
-        <h2>My Education</h2>
+        <h2 class = "section-subtitle">My Education</h2>
         {% for e in edu %}
         <article>
             <h3>{{e.degree}} || {{e.school}}</h3>
