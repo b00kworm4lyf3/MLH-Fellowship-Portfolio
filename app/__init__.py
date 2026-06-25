@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import folium
 
 
-from .data import user, hobbies, exp, travel
+from .data import user, hobbies, exp, edu, travel
 
 load_dotenv()
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def hobby():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title="About Me", user = user)
+    return render_template('about.html', title="About Me", user = user, edu = edu)
 
 @app.route('/work')
 def work():
